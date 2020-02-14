@@ -154,42 +154,37 @@ nav li {
   margin-top: 20px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 300px) {
   section {
     margin: 30px;
   }
-  h1.title {
-    font-size: 50px;
-  }
 
   h2 {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   nav {
-    font-size: 50px;
-    height: 3em;
-    margin-bottom: 30px;
+    font-size: 1.2em;
   }
 
   .panel {
-    margin: 40px 0;
+    margin: 10% 0;
   }
 
   h1 {
-    font-size: 6em;
+    font-size: 2em;
   }
 
   p {
-    font-size: 3em;
+    font-size: 1em;
   }
 
   ul {
-    list-style: decimal;
+    list-style: circle;
     margin: 30px;
   }
 
   li {
-    margin: 0 50px;
+    margin: 0 10px;
   }
 }
