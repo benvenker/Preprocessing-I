@@ -154,6 +154,12 @@ nav li {
   margin-top: 20px;
 }
 
+@media (max-width: 800px) {
+  section {
+    margin: 20px;
+  }
+}
+
 @media (min-width: 300px) {
   section {
     margin: 30px;
