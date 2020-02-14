@@ -146,15 +146,24 @@ nav {
 
 nav ul {
   display: flex;
+  list-style: none;
 }
 
 nav li {
   flex-grow: 1;
+  margin-top: 20px;
 }
 
 @media (min-width: 500px) {
+  section {
+    margin: 30px;
+  }
   h1.title {
     font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
   }
 
   nav {
@@ -163,18 +172,21 @@ nav li {
     margin-bottom: 30px;
   }
 
+  .panel {
+    margin: 40px 0;
+  }
+
   h1 {
     font-size: 6em;
-    margin: 30px;
   }
 
   p {
     font-size: 3em;
-    margin: 30px;
   }
 
   ul {
-    list-style: circle;
+    list-style: decimal;
+    margin: 30px;
   }
 
   li {
