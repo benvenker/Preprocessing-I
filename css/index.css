@@ -138,6 +138,12 @@ table {
   width: 1em;
   margin-left: -1em;
 }
+.titlePadding {
+  padding: 10px 0;
+}
+.listMargin {
+  margin: 0 30px;
+}
 html,
 body {
   height: 100%;
@@ -147,19 +153,24 @@ body {
   padding-top: 30px;
   color: #333333;
 }
-li a {
+html li a,
+body li a {
   text-decoration: none;
   color: inherit;
 }
-nav .nav-items {
+html nav .nav-items,
+body nav .nav-items {
   display: flex;
-  justify-content: space-between;
 }
-nav .nav-items li {
+html nav .nav-items li,
+body nav .nav-items li {
   list-style: none;
+  flex-grow: 1;
 }
-.skills-and-projects li::before,
-.work-history li::before {
+html .skills-and-projects li::before,
+body .skills-and-projects li::before,
+html .work-history li::before,
+body .work-history li::before {
   content: "\2022";
   color: inherit;
   font-weight: bold;
@@ -167,34 +178,49 @@ nav .nav-items li {
   width: 1em;
   margin-left: -1em;
 }
-h1 {
+html h1,
+body h1 {
   font-size: 2em;
   font-weight: bold;
   padding: 10px 0;
 }
-h2 {
+html h2,
+body h2 {
   font-size: 1.5em;
   font-weight: bold;
   padding: 10px 0;
 }
-h3 {
+html h3,
+body h3 {
   font-size: 1.2em;
   font-weight: bold;
   padding: 10px 0;
 }
-li {
+html li,
+body li {
   padding: 5px;
+  margin: 0 30px;
 }
-.intro p {
+html .intro p,
+body .intro p {
   padding: 20px 0;
 }
-.skills-and-projects {
+html .skills-and-projects,
+body .skills-and-projects {
   display: flex;
 }
-.skills-and-projects .panel {
+html .skills-and-projects .panel,
+body .skills-and-projects .panel {
   flex-grow: 1;
 }
-.work-history {
+html .work-history,
+body .work-history {
   margin: 30px 0;
   border-top: 1px solid gray;
+}
+@media (max-width: 500px) {
+  html body,
+  body body {
+    margin: auto 20px;
+  }
 }
