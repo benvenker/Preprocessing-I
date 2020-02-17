@@ -135,7 +135,7 @@ table {
 }
 
 // Variables
-@fontColor: rgb(51, 51, 51);
+@fontColor: rgb(65, 65, 65);
 @systemFont: -apple-system, BlinkMacSystemFont;
 @fontWeight: bold;
 
@@ -166,7 +166,7 @@ body {
     "Helvetica Neue", sans-serif;
   max-width: 960px;
   margin: auto;
-  padding: 30px;
+  padding: 10px 30px;
   color: @fontColor;
 
   li a {
@@ -178,11 +178,11 @@ body {
     // display: none;
     .nav-items {
       display: flex;
-      // justify-content: space-between;
+      justify-content: space-between;
 
       li {
         list-style: none;
-        flex-grow: 1;
+        // flex-grow: 1;
       }
     }
   }
@@ -223,9 +223,7 @@ body {
 
   .skills-and-projects {
     display: flex;
-  }
 
-  .skills-and-projects {
     .panel {
       flex-grow: 1;
     }
@@ -238,10 +236,37 @@ body {
   .work-history {
     margin: 30px 0;
     border-top: 1px solid gray;
-  }
 
-  .devicons-git:before {
-    content: "\e602";
+    h1 {
+      padding-top: 30px;
+    }
+
+    .employment-header {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      border-bottom: 1px solid @fontColor;
+
+      .employer {
+        font-size: 1.8em;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+
+      span.employment-dates {
+        font-size: 2em;
+        align-content: right;
+        font-size: 1em;
+        font-weight: 200px;
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+      }
+    }
+
+    .title {
+      padding-top: 30px;
+    }
   }
 
   @media (max-width: 500px) {
