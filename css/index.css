@@ -208,6 +208,7 @@ body .intro p {
 html .skills-and-projects,
 body .skills-and-projects {
   display: flex;
+  padding-bottom: 20px;
 }
 html .skills-and-projects .panel,
 body .skills-and-projects .panel {
