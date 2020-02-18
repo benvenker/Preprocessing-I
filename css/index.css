@@ -139,7 +139,7 @@ table {
   margin-left: -1em;
 }
 .titlePadding {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .listMargin {
   margin: 0 30px;
@@ -167,6 +167,10 @@ html nav .nav-items li,
 body nav .nav-items li {
   list-style: none;
 }
+html nav .nav-items li a:hover,
+body nav .nav-items li a:hover {
+  color: #8a8cff;
+}
 html .skills-and-projects li::before,
 body .skills-and-projects li::before,
 html .work-history li::before,
@@ -178,23 +182,36 @@ body .work-history li::before {
   width: 1em;
   margin-left: -1em;
 }
-html h1,
-body h1 {
-  font-size: 2em;
+html .intro h1,
+body .intro h1 {
+  font-size: 4em;
   font-weight: bold;
+  padding: 20px 0;
+  text-align: center;
+}
+html .intro address,
+body .intro address {
+  text-align: center;
+}
+html .intro address p,
+body .intro address p {
   padding: 10px 0;
+}
+html .intro address a,
+body .intro address a {
+  color: #8a8cff;
 }
 html h2,
 body h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 html h3,
 body h3 {
   font-size: 1.2em;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 html li,
 body li {

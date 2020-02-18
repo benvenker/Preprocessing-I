@@ -138,6 +138,7 @@ table {
 @fontColor: rgb(65, 65, 65);
 @systemFont: -apple-system, BlinkMacSystemFont;
 @fontWeight: bold;
+@linkColor: rgb(138, 140, 255);
 
 // Mixins
 .darkBullets {
@@ -150,7 +151,7 @@ table {
 }
 
 .titlePadding {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .listMargin {
@@ -183,6 +184,10 @@ body {
       li {
         list-style: none;
         // flex-grow: 1;
+
+        a:hover {
+          color: @linkColor;
+        }
       }
     }
   }
@@ -194,14 +199,29 @@ body {
     }
   }
 
-  h1 {
-    font-size: 2em;
-    font-weight: @fontWeight;
-    .titlePadding();
+  .intro {
+    h1 {
+      font-size: 4em;
+      font-weight: @fontWeight;
+      .titlePadding();
+      text-align: center;
+    }
+
+    address {
+      text-align: center;
+    }
+
+    address p {
+      padding: 10px 0;
+    }
+
+    address a {
+      color: @linkColor;
+    }
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: @fontWeight;
     .titlePadding();
   }
