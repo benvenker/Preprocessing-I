@@ -1,0 +1,23 @@
+{
+  "name": "preprocessing-i",
+  "version": "1.0.0",
+  "description": "Digital Resume Project for LS",
+  "main": "index.js",
+  "dependencies": {
+    "less-watch-compiler": "^1.14.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benvenker/Preprocessing-I.git"
+  },
+  "author": "Ben Venker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benvenker/Preprocessing-I/issues"
+  },
+  "homepage": "https://github.com/benvenker/Preprocessing-I#readme"
+}
