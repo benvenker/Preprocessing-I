@@ -4,56 +4,303 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// Variables
+@fontColor: rgb(65, 65, 65);
+@systemFont: -apple-system, BlinkMacSystemFont;
+@fontWeight: bold;
+@linkColor: rgb(138, 140, 255);
+
+// Mixins
+.darkBullets {
+  content: "\2022";
+  color: inherit;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
+.titlePadding {
+  padding: 20px 0;
+}
+
+.listMargin {
+  margin: 0 30px;
+}
+
+// Main CSS
+
+html,
+body {
+  height: 100%;
+  font-family: @systemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  max-width: 960px;
+  margin: auto;
+  padding: 10px 30px;
+  color: @fontColor;
+
+  li a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav {
+    // display: none;
+    .nav-items {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        list-style: none;
+        // flex-grow: 1;
+
+        a:hover {
+          color: @linkColor;
+        }
+      }
+    }
+  }
+
+  .skills-and-projects,
+  .work-history {
+    li::before {
+      .darkBullets();
+    }
+  }
+
+  .intro {
+    h1 {
+      font-size: 4em;
+      font-weight: @fontWeight;
+      .titlePadding();
+      text-align: center;
+    }
+
+    address {
+      text-align: center;
+    }
+
+    address p {
+      padding: 10px 0;
+    }
+
+    address a {
+      color: @linkColor;
+    }
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: @fontWeight;
+    .titlePadding();
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: @fontWeight;
+    .titlePadding();
+  }
+
+  li {
+    padding: 5px;
+    .listMargin();
+  }
+
+  .intro p {
+    padding: 20px 0;
+  }
+
+  .skills-and-projects {
+    display: flex;
+    padding-bottom: 20px;
+
+    .panel {
+      flex-grow: 1;
+    }
+  }
+
+  .panel + .skills ul li {
+    list-style: none;
+  }
+
+  .work-history {
+    margin: 30px 0;
+    border-top: 1px solid gray;
+
+    h1 {
+      padding-top: 30px;
+    }
+
+    .employment-header {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      border-bottom: 1px solid @fontColor;
+
+      .employer {
+        font-size: 1.8em;
+        font-weight: bold;
+        padding: 20px 0;
+      }
+
+      span.employment-dates {
+        font-size: 2em;
+        align-content: right;
+        font-size: 1em;
+        font-weight: 200px;
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+      }
+    }
+
+    .title {
+      padding-top: 30px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    body {
+      padding: 20px;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .skills-and-projects {
+      flex-direction: column;
+    }
+  }
+}
